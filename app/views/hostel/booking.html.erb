@@ -1,0 +1,17 @@
+<br><br><br><br><br>
+<div class="BookingConfirmed NewHostelBG">
+  <% room = HostelRoom.find(session[:room_id]) %>
+  <p>Following are the deatils of the booked room:</p>
+  <ol>
+    <li>Hostel Name: <%= room.hostelname %> </li>
+    <li>Room Number: <%= room.number %> </li>
+    <li>Availability of AC: <%= room.ac %> </li>
+    <li>Number of roommates: <%= room.seater-1 %> </li>
+    <li>Price: <%= room.price %> </li>
+  </ol>
+  <div class="Buttons">
+    <button class="ConfirmButton">Confirm and pay</button>
+     <%= button_to " Change room!", room_change_path, method: "get", class: "ConfirmButton" %>
+  </div>
+</div>
+<br><br><br><br><br><br><br>

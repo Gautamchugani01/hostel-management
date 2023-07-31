@@ -1,0 +1,22 @@
+<center class="SignUp-Form NewHostelBG">
+  <h1 class="NewUsers-title">Please chose a meal plan.</h1>
+  <section class="UserNew">
+    <%= form_with url: meal_index_path do |form| %>
+      <div class="Form-Section">
+        <p class="FormInput-label">Mark at which times you wish to eat from the hostel mess:</p>
+        <%= form.radio_button :breakfast, 'breakfast' %> Breakfast <br>
+        <%= form.radio_button :lunch, 'lunch' %> Lunch <br>
+        <%= form.radio_button :dinner, 'dinner' %> Dinner <br>
+      </div>
+      <div class="Form-Section">
+        <p class="FormInput-label">Do you want the tiffin service?:</p>
+        <%= form.radio_button :tiffin, 'yes' %> Yes <br>
+        <%= form.radio_button :tiffin, 'no' %> No <br>
+      </div>
+      <div class="Form-Section">
+      <%= form.submit "Confirm", class: "Form-Submit" %>
+      </div>
+    <% end %>
+  </section>
+</center>
+<br><br><br><br><br><br><br>
